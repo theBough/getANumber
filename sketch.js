@@ -11,16 +11,12 @@ function setup() {
 }
 function draw() {
   background("#3A86FF");
-
   text("My First Project", 50, 75);
   textSize(72);
-  //text("My First Project",75,150);
-  getNumber();
-  text("Your number is: " + theirNumber, 100, 220);
+  text("Your number is: " + getNumber(myInput.value()), 100, 220);
 }
 
-function getNumber() {
-  theirNumber = myInput.value();
-  theirNumber = theirNumber % 10
-  console.log(theirNumber);
+function getNumber(thisNum) {
+  thisNum = thisNum % 10
+  return(thisNum)
 } //end getNumber
