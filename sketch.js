@@ -13,10 +13,10 @@ function draw() {
   background("#3A86FF");
   text("My First Project", 50, 75);
   textSize(72);
-  text("Your number is: " + getNumber(myInput.value()), 100, 220);
+  text("Your number is: " + getNumber(myInput.value(),3), 100, 220);
 }
 
-function getNumber(thisNum) {
-  thisNum = thisNum % 10
+function getNumber(thisNum,howManyDigits) {
+  thisNum = thisNum % (Math.pow(10,howManyDigits))
   return(thisNum)
 } //end getNumber
