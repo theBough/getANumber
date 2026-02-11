@@ -21,14 +21,27 @@ function setup() {
 }
 function draw() {
   background("#3A86FF");
-  textFont(myFont)
-  text("Playing with Numbers", 50, 75);
-  text("Enter a number:", 50, 125);
-  text("How many digits do you want:", 50, 175);
-  
+  designStuff();
+  textStuff();
   textSize(24);
   text("Your number is: " + getNumber(myInput.value(),howManyDigit.value()), 100, 220);
 }
+function textStuff(){
+  text("Playing with Numbers", 50, 75);
+  text("Enter a number:", 50, 125);
+  text("How many digits do you want:", 50, 175);
+}//textStuff
+
+function designStuff(){
+  push()
+  fill("#03045E")
+  stroke(255)
+  strokeWeight(50)
+  rect(50,50,700,400)
+  pop()
+  fill(255)
+  textFont(myFont)
+}//end designStuff
 
 function getNumber(thisNum,howManyDigits) {
   thisNum = thisNum % (Math.pow(10,howManyDigits))
