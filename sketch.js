@@ -2,6 +2,7 @@ let myInput;
 let howManyDigit;
 let theirNumber;
 let myFont;
+let myPicture;
 
 function setup() {
   createCanvas(800, 400);
@@ -18,6 +19,7 @@ function setup() {
   
   //load a custum font
   myFont = loadFont("PlaywriteCUGuides-Regular.ttf")  
+  myPicture = loadImage("numberPicForCompSci.png")
 }
 function draw() {
   background("#3A86FF");
@@ -25,6 +27,8 @@ function draw() {
   textStuff();
   textSize(24);
   text("Your number is: " + getNumber(myInput.value(),howManyDigit.value()), 100, 220);
+  myPicture.resize(20,20)
+  image(myPicture, 25,25)
 }
 function textStuff(){
   text("Playing with Numbers", 50, 75);
